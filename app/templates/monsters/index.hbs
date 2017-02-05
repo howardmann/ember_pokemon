@@ -1,16 +1,1 @@
-<h2>ALL Monsters</h2>
-
-<ul>
-{{#each model as |monster|}}
-  <li>
-    {{#link-to 'monsters.monster' monster}}
-      {{monster.name}}
-    {{/link-to}}
-  </li>
-{{/each}}
-</ul>
-
-<hr>
-
-{{#link-to 'monsters.new'}}NEW Monster{{/link-to}}
-{{outlet}}
+{{monster-all model=model}}

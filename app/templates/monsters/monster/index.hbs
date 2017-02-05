@@ -1,8 +1,1 @@
-<h2>SINGLE Monster</h2>
-<p>Name: {{model.name}}</p>
-<p>Level: {{model.level}}</p>
-<hr>
-
-{{#link-to 'monsters.monster.edit' model}}EDIT Monster{{/link-to}}
-|
-<a href="#" {{action "deleteMonster"}}>DELETE Monster</a>
+{{monster-show model=model}}

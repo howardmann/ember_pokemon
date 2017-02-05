@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Component.extend({
   actions: {
     updateMonster(){
       this.get('model').save();
-      this.transitionToRoute('monsters');
+      this.get('router').transitionTo('monsters');
     }
   }
 });

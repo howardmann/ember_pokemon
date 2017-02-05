@@ -1,12 +1,12 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Component.extend({
   actions: {
     deleteMonster(){
       if(confirm("Are you sure?")){
         let model = this.get('model');
         model.destroyRecord().then(()=>{
-          this.transitionToRoute('monsters');
+          this.get('router').transitionTo('monsters');
         });
       }
     }
